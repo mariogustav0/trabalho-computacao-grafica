@@ -1,0 +1,8 @@
+# Compilacao e binarios
+*.exe
+*.o
+*.obj
+*.a
+
+# Arquivos temporarios de imagem / renderizacao
+*.ppm
