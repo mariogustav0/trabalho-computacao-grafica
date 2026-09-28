@@ -30,22 +30,23 @@ void desenharPoligono(float pontos[][2], int quantidade, int fechado)
     glEnd();
 }
 
-// Desenha uma elipse 
+// Desenha uma elipse com curvas parametricas
 void desenharElipse(float cx, float cy, float rx, float ry)
 {
     int i;
-    float angulo;
+    float t;
+    float x, y;
 
     glBegin(GL_LINE_LOOP);
 
-    for (i = 0; i < 40; i++)
+    for (i = 0; i < 100; i++)
     {
-        angulo = 2.0f * 3.14159f * i / 40.0f;
+        t = 2.0f * 3.14159f * i / 100.0f;
 
-        glVertex2f(
-            cx + rx * cosf(angulo),
-            cy + ry * sinf(angulo)
-        );
+        x = cx + rx * cosf(t);
+        y = cy + ry * sinf(t);
+
+        glVertex2f(x, y);
     }
 
     glEnd();
@@ -257,9 +258,15 @@ void desenharBandeira(void)
     glColor3f(1.0f, 0.10f, 0.10f);
     glLineWidth(5.0f);
 
-    desenharCurva(curvaSuperior, 6);
-    desenharCurva(curvaInferior, 9);
-    desenharCurva(curvaDireita, 10);
+    // Transformação geométrica 
+    glPushMatrix();
+        glTranslatef(20.0f, 0.0f, 0.0f);
+
+        desenharCurva(curvaSuperior, 6);
+        desenharCurva(curvaInferior, 9);
+        desenharCurva(curvaDireita, 10);
+
+    glPopMatrix();
 }
 
 
