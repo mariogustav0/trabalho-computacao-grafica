@@ -14,7 +14,7 @@ void desenharLinha(float x1, float y1, float x2, float y2)
     glEnd();
 }
 
-// Desenha um polígono ou sequência de linhas 
+// Desenha um polígono ou sequência de linhas ... TESTE
 void desenharPoligono(float pontos[][2], int quantidade, int fechado)
 {
     int i;
