@@ -6,3 +6,6 @@
 
 # Arquivos temporarios de imagem / renderizacao
 *.ppm
+
+# Relatorios (mantidos apenas localmente)
+*.pdf
