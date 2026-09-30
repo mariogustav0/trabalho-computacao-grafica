@@ -299,7 +299,7 @@ void desenharMoldura(void)
 }
 
 
-/* ---------- Callbacks de interacao ---------- /
+/* ---------- Callbacks de interacao ---------- */
 
 /* Clique esquerdo alterna a cor de TODAS as formas (original <-> rosa) */
 void mouse(int button, int state, int x, int y)
